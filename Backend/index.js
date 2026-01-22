@@ -152,6 +152,8 @@ app.get("/pipeline/:id", (req, res) => {
   res.json(pipeline);
 });
 
-app.listen(4000, () => {
-  console.log("Backend running on port 4000");
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log("Backend running on port", PORT);
 });
